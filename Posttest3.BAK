@@ -1,0 +1,40 @@
+domains 
+
+nilai = symbol
+matakuliah = symbol
+nama = symbol
+
+
+predicates
+nondeterm mahasiswa(nama,matakuliah,nilai)
+nondeterm matakuliah(matakuliah)
+
+clauses
+matakuliah("IntelejensiBuatan").
+matakuliah("SistemOperasi").
+matakuliah("PDE").
+
+mahasiswa("Irfan","IntelejensiBuatan","A").
+mahasiswa("Komeng","IntelejensiBuatan","D").
+mahasiswa("Dati","IntelejensiBuatan","C").
+mahasiswa("Fatima","IntelejensiBuatan","B").
+mahasiswa("Maspion","IntelejensiBuatan","C").
+
+mahasiswa("Ricky","SistemOperasi","E").
+mahasiswa("Embang","SistemOperasi","A").
+mahasiswa("Salmin","SistemOperasi","D").
+mahasiswa("Vina","SistemOperasi","B").
+mahasiswa("Sondang","SistemOperasi","C").
+
+mahasiswa("Pamuji","PDE","D").
+mahasiswa("Luki","PDE","E").
+mahasiswa("Sadek","PDE","B").
+mahasiswa("Yusida","PDE","A").
+mahasiswa("Eka","PDE","A").
+
+goal
+mahasiswa(Nama,Matakuliah,_),Matakuliah="IntelejensiBuatan";
+mahasiswa(TidakLulus,_,Nilai),Nilai>"C";
+mahasiswa(Lulus,_,Nilai),Nilai<"C";
+mahasiswa(_,Matakuliah,_);
+mahasiswa(Nama,_,_).
