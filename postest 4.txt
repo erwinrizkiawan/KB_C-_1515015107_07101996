@@ -1,0 +1,37 @@
+Nama	: Erwin Rizkiawan
+NIM	: 1515015107
+Kelas	: C1 2015
+
+
+
+Menurut Analisis Saya :
+A.Tujuan atau goal programnya adalah pembunuh(X) maksudnya adalah pembunuh dengan variabel X. 
+Pencocokan klausa sang pembunuh(Pembunuh) dan variabel X dicocokkan (unifikasi) dengan variabel Pembunuh.
+
+B. Pertama pemanggilan subgoal yaitu orang(Pembunuh,_,_,_) dan mencari kecocokan. Ditemukan kecocokan dengan fakta pertama dari klausa orang. 
+Pada tahap ini Pembunuh diikat dengan value budi karena pada subgoal tersebut mengabaikan isinya, Kemudian melakukan lacakbalik pada fakta orang(budi,_,_,_).
+
+C. Lalu melakukan pemanggilan untuk subgoal yang kedua yaitu terbunuh(Terbunuh), mencari kecocokan ditemukan dengan fakta yang pertama terbunuh(siti),
+siti terbunuh, dan Prolog melakukan titik lacakbalik pada terbunuh(siti).
+
+D. Melakukan pemenuhan subgoal yang ketiga, Terbunuh <> Pembunuh, mencari kecocokan
+Karena Terbunuh parameter si Siti tidak sama dengan si Budi Maka melanjutkan ke klausa berikutnya.
+
+E. Melakukan pemenuhan subgoal yang keempat, dicurigai(Pembunuh), mencari kecocokan lalu ada kecocokan dengan fakta pertama dari klausa dicurigai(X). 
+dan variabel Pembunuh dicocokkan dengan variabel X.
+
+F. Setelah itu syarat yang pertama pada rule tersebut adalah terbunuh_dengan(siti,Senjata), mencari kecocokan ditemukan kecocokan dengan fakta pertama dari klausa terbunuh_dengan. 
+Pembunuh berparameter pentungan karena fakta pertamanya adalah terbunuh_dengan(siti,pentungan), lalu melakukan lacakbalik pada fakta terbunuh_dengan(siti,pentungan).
+
+G. Kemudian pemanggilan syarat yang kedua pada rule tersebut dengan cara cara_kerja_mirip(Benda,Senjata), mencari kecocokan ditemukan kecocokan dengan faktayang pertama dari klausa cara_kerja_mirip.
+Benda berparameter kaki_palsu, karena fakta pertamanya adalah cara_kerja_mirip(kaki_palsu,pentungan) lalu melakukan lacakbalik pada fakta cara_kerja_mirip(kaki_palsu,pentungan).
+
+H. Kemudian pemanggilan syarat ketiga pada rule tersebut yaitu kemungkinan_milik(X,Benda), mencari kecocokan nilai dari X adalah budi dan Benda adalah kaki_palsu. 
+Pada klausa ini syaratnya milik(X,Benda) ada kecocokan dengan fakta pertama milik(budi,kaki_palsu) dan melakukan lacakbalik.
+
+I. Melakukan pemenuhan subgoal yang kelima yaitu ternodai(Pembunuh,Zat), dan mencari kecocokan untuk panggilan ini dan tadi diketahui nilai dari Pembunuh adalah si budi. 
+Kemudian menemukan dengan fakta yang pertama ternodai(budi,darah). Kemudian Zat berparameter darah dan melakukan lacakbalik pada ternodai(budi,darah).
+
+J. Melakukan pemenuhan subgoal yang kelima adalah ternodai(Terbunuh,Zat), mencari kecocokan nilai dari Terbunuh adalah siti dan Zat adalah darah. menemukan kecocokan dengan fakta fakta dan subgoal terakhir sukses.
+
+K. Terakhir pada rule pembunuh dapat dipenuhi mengembalikan nilai X pada goal pembunuh(Pembunuh), X dengan nilai Pembunuh dan Pembunuh dengan nilai budi, maka X adalah si budi pada goal tersebut.  
