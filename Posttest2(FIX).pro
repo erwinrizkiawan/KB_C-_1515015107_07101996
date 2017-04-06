@@ -1,0 +1,16 @@
+domains
+buyer,vehicle = symbol price,pay = ulong
+
+predicates
+buy(buyer,vehicle,price,pay) - nondeterm (o,o,o,o)
+rest(price,pay,price) - nondeterm(i,i,o)
+
+clauses
+buy(erwin,car,80000000,80000000).
+buy(rizkiawan,motorcycle,13000000,12500000).
+
+rest(Price,Pay,Refund):-
+Refund=Pay-Price.
+
+goal
+buy(Buyer,Vehicle,Price,Pay),Buyer=erwin,rest(Price,Pay,Refund).
